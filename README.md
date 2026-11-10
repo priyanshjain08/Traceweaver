@@ -55,5 +55,3 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 ## Security notes
 Helmet, CORS allow-list, JWT auth, rate limiting, Zod validation everywhere, API keys stored only as SHA-256 hashes, no stack traces in error responses. The demo seed password is for local use only. JWT is kept in localStorage in this version; move to httpOnly cookies for production.
 
-## License
-MIT
