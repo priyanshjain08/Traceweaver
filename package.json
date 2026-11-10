@@ -1,0 +1,17 @@
+{
+  "name": "traceweaver",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm run dev -w @traceweaver/api\" \"npm run dev -w @traceweaver/web\"",
+    "db:up": "docker compose up -d",
+    "db:generate": "npm run prisma:generate -w @traceweaver/api",
+    "db:migrate": "npm run prisma:migrate -w @traceweaver/api",
+    "db:seed": "npm run seed -w @traceweaver/api",
+    "build": "npm run build -w @traceweaver/api && npm run build -w @traceweaver/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": { "concurrently": "9.1.0", "typescript": "5.6.3" }
+}

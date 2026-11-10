@@ -1,0 +1,1 @@
+export default { darkMode: 'class', content: ['./index.html', './src/**/*.{ts,tsx}'], theme: { extend: { colors: { ink: { 950: '#0b0e14', 900: '#11151d', 800: '#181d28', 700: '#232a38' } } } }, plugins: [] };
